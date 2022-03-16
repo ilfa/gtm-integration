@@ -56,6 +56,13 @@
 			scriptSrc = getScriptSrcFromInitGtm( gtmDataPoints )( gtmId );
 		}, timeout);
 	});
+
+	window.GtmFpjsIntegrationWrapper = function(apiKey, callback) {
+		const fpPromise = window.FingerprintJS.load({apiKey});
+		fpPromise
+				.then(function(fp) { return fp.get(); })
+				.then(function(result) { callback(result); });
+	}
 </script>
 
 <svelte:head>
