@@ -59,9 +59,7 @@
 
 	window.GtmFpjsIntegrationWrapper = function(options, callback) {
 		const fpPromise = window.FingerprintJS.load(options);
-		fpPromise
-				.then(function(fp) { return fp.get(); })
-				.then(function(result) { callback(result); });
+		callback(fpPromise);
 	}
 </script>
 
