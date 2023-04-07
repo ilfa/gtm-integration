@@ -66,6 +66,14 @@
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<form action="#" id="form1">
+		<lable>Field 1<input type="text" id="field1"></lable>
+		<input type="hidden" id="hidden1" value="hidden1">
+	</form>
+	<form action="/" id="form2">
+		<lable>Field 2<input type="text" id="field2"></lable>
+		<input type="hidden" id="hidden2" value="hidden2">
+	</form>
 </main>
 
 <style>
